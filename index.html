@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet/css/clocklet.min.css">
+<script src="https://cdn.jsdelivr.net/npm/clocklet"></script>
+        <link
+        href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.14.0/jquery.timepicker.min.css" integrity="sha512-WlaNl0+Upj44uL9cq9cgIWSobsjEOD1H7GK1Ny1gmwl43sO0QAUxVpvX2x+5iQz/C60J3+bM7V07aC/CNWt/Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="style3.css">
+        <link rel="stylesheet" href="style4.css">
+        <link rel="stylesheet" href="style5.css">
+        <link rel="stylesheet" href="style6.css">
+    </head>
+<body>
+    <section class=" navgiation-container">
+        <nav class="navbar navbar-expand-lg main-nav">
+            <div class="container-fluid">
+              <a class="navbar-brand logo-name" href="#">Foodies</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse search-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto form" role="search">
+                    <input type="text" placeholer="search foods..." class=" search-bar"></input>
+                    <div class="skew-style"></div>
+                    <button class="btn search" type="submit"><i class="fa-solid fa-magnifying-glass glass"></i> 
+                        <span>Search
+                        </span>                        </button>
+                  </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 collapse-nav">
+                  <li class="nav-item">
+                    <a class="nav-link main-link" aria-current="page" href="#"><i class="fa-sharp fa-solid fa-bag-shopping bag nav-i"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link main-link" href="#"><i class="fa-solid fa-heart heart nav-i"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link main-link"><i class="fa-solid fa-user user nav-i"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg second-nav">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" width="80%">
+                  <li class="nav-item">
+                    <a class="nav-link active second-main-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">Todays Special</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link second-main-link" href="#">Popular Menu</a>
+                  </li>
+                </ul>
+              </div>
+              <a class="navbar-brand ms-auto d-boy-con" href="#"  style="width: 25%;" >
+              <div class="wrap-text">
+                <p class=" delivery">Get Free Delivery <br>+12 123 4567 890</p>
+                <img src="boy.png" class="d-boy" alt="">
+              </div>
+                        
+              </a>
+            </div>
+          </nav>
+
+    </section>
+
+    <!-- section 1 -->
+
+    <section class=" container-fluid-1">
+      <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="my-3 mb-4">
+          <span class="off">20% Off</span><span class="order">On Your Online 1st Order</span>
+        </div>
+          <h4 class="first-heading">Bow Taking Online Orders</h4>
+        <h1 class="first-sub-heading">We Serve <span class="sub-style">The Test</span>  You Love</h1>
+        <p class="first-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa dolore, amet asperiores alias neque tenetur ea, perspiciatis eum ab odit ex fugit eius magni at repellendus nam iste qui.</p>
+        <button class="explore-btn">Explore Menu</button>
+        <button class="book-btn">Book A Table</button>
+      </div>
+      <!--  -->
+      <div class="col-lg-6 col-md-6 img-slide-con">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active img-content-con" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <img src="steak.png" alt="" class="steak">
+          <div class="discont">
+            5% <br> <span class="disc-style">Discont</span> For 2 Orders
+          </div>
+          <div class="salad">
+            <img src="salad.png" alt="" class="salad-img">Salad
+          </div>
+          <div class="burgur">
+            <img src="burgur.png" alt="" class="salad-img">Burgur
+          </div>
+          <div class="pizza">
+            <img src="pizza.png" alt="" class="salad-img">Pizza
+          </div>
+          <div class="drinks">
+            <img src="drinks.png" alt="" class="salad-img">Drinks
+          </div>
+          <div class="breakfast">
+            <img src="breakfast.png" alt="" class="salad-img">Breakfast
+          </div>
+          </div>
+          <div class="tab-pane fade img-content-con" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <img src="sushi.png" alt="" class="steak">
+            <div class="discont">
+              10% <br> <span class="disc-style">Discont</span> For 4 Orders
+            </div>
+            <div class="salad">
+              <img src="salad.png" alt="" class="salad-img">Salad
+            </div>
+            <div class="burgur">
+              <img src="burgur.png" alt="" class="salad-img">Burgur
+            </div>
+            <div class="pizza">
+              <img src="pizza.png" alt="" class="salad-img">Pizza
+            </div>
+            <div class="drinks">
+              <img src="drinks.png" alt="" class="salad-img">Drinks
+            </div>
+            <div class="breakfast">
+              <img src="breakfast.png" alt="" class="salad-img">Breakfast
+            </div>
+          </div>
+        </div>
+        <ul class="nav nav-pills my-5 justify-content-center nav-arrow" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active left-arrow" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-angle-left"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link right-arrow" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-angle-right"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+    <!-- section 2 -->
+
+    <section class="container-fluid-2">
+      <div class="row inp-row">
+      <div class="col-lg-2 col-md-12">
+        <h4 class="book-table">Book At Table</h4>
+      </div>
+      <div class="col-lg-8 input-con col-md-12">
+        <div class="date">
+          <label for="" class="lbl">Date</label>
+          <input type="text" placeholder="Pic A Date" class="date-btn" id="datepicker">
+        </div>
+        <!--  -->
+        <div class="time">
+          <label for="" class="lbl">Time</label>
+          <input data-clocklet placeholder="Select Time" class="time-btn timepicker" >
+        </div>
+        <!--  -->
+        <div class="people">
+          <label for="" class="lbl">People</label>
+          <select type="select" placeholder="Select People" class="people-btn">
+            <option value="1">Single</option>
+            <option value="2">Couple</option>
+            <option value="3">Family</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-12 book-now-con">	
+        <button class="book-now-btn">Book Now</button>
+      </div>
+    </div>
+    </section>
+
+    <!-- section 3 -->
+
+    <section class="container-fluid-3">
+      <h5 class="second-heading">Want To Eat</h5>
+
+      <h2 class="second-sub-heading">Our Popular Items</h2>
+
+      <p class="second-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum ea nisi beatae laborum non enim nulla eum magni quasi voluptates, voluptatibus, odit sunt facilis voluptatem, distinctio hic cumque eveniet.</p>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="items-one" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="row card-slide-con">
+                <div class="col-lg-3 col-md-6 tab-col-1">
+                  <div class="item-card-con">
+                    <img src="chicken.png" alt="" class="img-card">
+                    <h4 class="chicked-heading">Hot Chicken</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp;<span class="float-end">$14.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6 tab-col-1">
+                  <div class="item-card-con">
+                    <img src="salad.png" alt="" class="img-card veg-salad">
+                    <h4 class="chicked-heading">Vegetable Salad</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$15.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6">
+                  <div class="item-card-con">
+                    <img src="pizza.png" alt="" class="img-card chk-pizza">
+                    <h4 class="chicked-heading">Chicken Pizza</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$11.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6 d">
+                  <div class="item-card-con end-card">
+                    <img src="pasta.png" alt="" class="img-card pasta">
+                    <h4 class="chicked-heading">Spicy Pasta</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$9.00</span></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="items-two" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="row card-slide-con">
+                <div class="col-lg-3 col-md-6 tab-col-1">
+                  <div class="item-card-con">
+                    <img src="chicken.png" alt="" class="img-card">
+                    <h4 class="chicked-heading">Hot Chicken</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$14.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6 tab-col-1">
+                  <div class="item-card-con">
+                    <img src="salad.png" alt="" class="img-card veg-salad">
+                    <h4 class="chicked-heading">Vegetable Salad</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$15.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6">
+                  <div class="item-card-con">
+                    <img src="pizza.png" alt="" class="img-card chk-pizza">
+                    <h4 class="chicked-heading">Chicken Pizza</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$11.00</span></span></button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-6">
+                  <div class="item-card-con end-card">
+                    <img src="pasta.png" alt="" class="img-card pasta">
+                    <h4 class="chicked-heading">Spicy Pasta</h4>
+                    <p class="chicken-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+                    <div class="icon-con">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                    <button class="cart-btn"><span class="cart-text">Add To Cart &nbsp; <span class="float-end">$9.00</span></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 ">
+          <ul class="nav nav-pills mb-3 nav-arrow justify-content-center " id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active left-arrow" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#items-one" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-angle-left"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link right-arrow" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#items-two" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-angle-right"></i></button>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- section 4 -->
+
+    <section class="container-fluid-4">
+      <div class="row">
+        <h6 class="third-heading dis-none-1">About Us</h6>
+        <h2 class="third-sub-heading dis-none-1">We Are More Than Multiple Service</h2>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="service-img-con">
+            <img src="plate.png" alt="" class="plate" >
+            <img src="leg.png" alt="" class="leg">
+            <img src="cheese.png" alt="" class="cheese">
+            <img src="juice.png" alt="" class="juice">
+            <img src="sauce.png" alt="" class="sauce">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+        <h6 class="third-heading dis-none">About Us</h6>
+        <h2 class="third-sub-heading dis-none">We Are More Than Multiple Service</h2>
+        <p class="third-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque deleniti eum ut incidunt temporibus minus sunt molestias cupiditate rerum officia alias, cum dolores eveniet commodi reiciendis ab quibusdam culpa?</p>
+        <div class="service-icon-con row">
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="kitchen.png" alt="" class="round-icon"><span class="icon-text">Clean Kitchen</span></div>
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="headphone.png" alt="" class="round-icon"><span class="icon-text">24/7 Service</span></div>
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="cart.png" alt="" class="round-icon"><span class="icon-text">Online Order</span></div>
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="bell.png" alt="" class="round-icon"><span class="icon-text">Pre Reservation</span></div>
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="table.png" alt="" class="round-icon"><span class="icon-text">Orgainzed Place</span></div>
+          <div class="col-lg-6 col-md-6 col-sm-6"><img src="chef.png" alt="" class="round-icon"><span class="icon-text">Super Chef</span></div>
+        </div>
+        <div class="btn-con"><button class="story-btn">Watch Our Story <i class="fa-regular fa-circle-play"></i></button></div>
+
+        
+      </div>
+    </div>
+
+    </section>
+
+    <!-- section 5 -->
+
+    <section class="container-fluid-5">
+      <div class="row ">
+        <div class="col-lg-4 food-court-con  overflow-auto col-md-12">
+          <div class="">
+          <div class=" align-items-start court-con">
+            <div class="nav flex-column nav-pills me-3  scroll-con" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <div class="live">
+                <button type="button " class="btn btn-danger active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" aria-selected="true" role="tab">
+                  <span class="badge bg-light float-start"><img src="coffee.png" class="" alt=""></span><span class="btn-text-tab">Coffee</span>
+                  </button>
+              </div>
+
+              <div class="live">
+  <button type="button " class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile">
+    <span class="badge bg-light float-start"><img src="fry.png" class="" alt=""></span> <span class="btn-text-tab">Fast Food</span>
+    </button>
+</div>
+
+<div class="live">
+  <button type="button  " class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings">
+    <span class="badge bg-light float-start"><img src="pizz.png" class="" alt=""></span> <span class="btn-text-tab"> Pizza</span>
+    </button>
+</div>
+
+<div class="live">
+  <button type="button " class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-desert">
+    <span class="badge bg-light float-start"><img src="cake.png" class="" alt=""></span><span class="btn-text-tab">Deserts</span>
+    </button>
+</div>
+
+<div class="live">
+  <button type="button  " class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lasagna">
+    <span class="badge bg-light float-start"><img src="lasagna.png" class="" alt=""></span><span class="btn-text-tab">Lasagna</span>
+    </button>
+</div>
+
+<div class="live">
+  <button type="button " class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ramen">
+    <span class="badge bg-light float-start"><img src="ramen.png" class="" alt=""></span><span class="btn-text-tab">Ramen</span>
+    </button>
+</div>
+
+<div class="live">
+  <button type="button" class="btn btn-danger" id="v-pills-badge-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sushi">
+    <span class="badge bg-light float-start"><img src="sasami.png" class="" alt=""></span><span class="btn-text-tab">Sushi</span>
+    </button>
+</div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+          <div class="d-flex align-items-start">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active coffee-post" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="cap.png" alt="" class="cap">
+              </div>
+
+            </div>
+            <div class="tab-pane fade coffee-post" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="steak.png" alt="" class="cap">
+              </div>
+
+            </div>
+            <div class="tab-pane fade coffee-post" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="pizza.png" alt="" class="cap b-r">
+              </div>
+            </div>
+            <div class="tab-pane fade coffee-post" id="v-pills-desert" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="cake-1.png" alt="" class="cap b-r">
+              </div>
+            </div>
+            <div class="tab-pane fade coffee-post" id="v-pills-lasagna" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="cap.png" alt="" class="cap">
+              </div>
+            </div>
+            <div class="tab-pane fade coffee-post" id="v-pills-ramen" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="ramen-1.png" alt="" class="cap">
+              </div>
+            </div>
+            <div class="tab-pane coffee-post fade" id="v-pills-sushi" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <div class="container mt-3 coffee-con">
+                <div class="mt-4 p-5  text-black rounded">
+                  <span class="del-badge">
+                    <span class="badge-text">Fast Food Delivery Service</span><span><img src="boy.png" alt="" class="d-badge"></span>
+                  </span>
+                  <h1 class="fourth-heading">Get Delivered While It Is Hot.</h1> 
+                  <p class="fourth-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+                  <button class="get-start-btn">Get Started Now</button>
+                </div>
+                <img src="sushi.png" alt="" class="cap">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+<!-- section 6 -->
+<section class="container-fluid-6 text-center">
+  <img src="spoon.png" alt="" class="spoon">
+  <img src="berry.png" alt="" class="berry">
+  <h5 class="fifth-heading">All Food Items</h5>
+  <h1 class="fifth-sub-heading">Amazing Food Served With Delicacy</h1>
+
+  <div class="row ">
+    <div class="col-lg-12">
+      <ul class="nav nav-pills mb-3 food-tab-con" id="pills-tab" role="tablist">
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All Categories</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-pizza" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pizza</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-burger" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Burger</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-ice" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ice Cream</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-drinks" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Drinks</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-lunch" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Lunch</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-breakfast" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Breakfast</button>
+        </li>
+        <li class="nav-item food-tab" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-diner" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Dinner</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3  col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-burger" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-ice" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-drinks" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-diner" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row food-tab-row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card.png" alt="" class="card1-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="card-pasta.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+      <div class="row food-tab-row2">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="card1-con">
+              <img src="chicken-card2.png" alt="" class="card3-img">
+              <div class="icon-con-card">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="card1-heading">Hot Chicken</h4>
+              <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+              <div>
+                <span class="amnt">$7.10</span>
+                <span class="amnt-icon">
+                  <i class="fa-regular fa-heart alert"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+               
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card1-con">
+            <img src="salad.png" alt="" class="card2-img">
+            <div class="icon-con-card">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="card1-heading">Vegetable Salad</h4>
+            <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+            <div>
+              <span class="amnt">$8.11</span>
+              <span class="amnt-icon">
+                <i class="fa-regular fa-heart alert"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+             
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="card1-con">
+          <img src="pizza-card.png" alt="" class="card2-img">
+          <div class="icon-con-card">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h4 class="card1-heading">Chicken Pizza</h4>
+          <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+          <div>
+            <span class="amnt">$12.25</span>
+            <span class="amnt-icon">
+              <i class="fa-regular fa-heart alert"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card1-con">
+        <img src="burgur.png" alt="" class="card2-img">
+        <div class="icon-con-card">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4 class="card1-heading">Spicy Pasta</h4>
+        <p class="card1-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim?</p>
+        <div>
+          <span class="amnt">$17.10</span>
+          <span class="amnt-icon">
+            <i class="fa-regular fa-heart alert"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+         
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="view-food">View all Items</button>
+</section>
+<!-- section 7 -->
+<section class="container-fluid-7">
+  
+    <div class="row">
+      <div class="poster-con">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h4 class="sixth-heading">Special Combo pack</h4>
+        <h1 class="sixth-sub">WE MAKE THE BEST* BURGER IN YOUR TOWN</h1>
+        <P class="sixth-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime blanditiis excepturi optio quasi recusandae quas unde! Nihil ipsa sit molestias! Lorem ipsum dolor sit amet.</P>
+        <img src="burger-pos.png" alt="" class="poster dis-none">
+        <button class="order-btn">Order Now</button>
+        <span class="real-price">$46.99</span>
+        <span class="price-before"> <sub><del> $59.99</del></sub> </span>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+         <div id="burst-12">
+          <span class="fifty">50</span>
+          <span class="per">%</span>
+          <span class="off-per">off</span>
+         </div>
+      </div>
+    </div>
+    </div>
+
+    <img src="burger-pos.png" alt="" class="poster dis-none2">
+</section>
+
+<!-- section 8 -->
+<section class="container-fluid-8">
+  <div class="row">
+  <div class="app-con">
+    <div class="col-lg-6 col-md-12 col-sm-12">  
+        <h1 class="seventh-heading">Get The Foodies App</h1>
+    <p class="seventh-sub">We will send you a link,open on your phone to <br>
+    Download the app
+    </p>
+    <div class="input-group mb-3">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="example@gmail.com">
+        <label for="floatingInputGroup1">example@gmail.com</label>
+      </div>
+      <span class="input-group-text">
+        <button class="share-btn">Share App Link</button>
+      </span>
+    </div>
+
+    <div class="col-md-12 img-con-md col-sm-12">   
+      <img src="wada.png" alt="" class="wada">
+   <img src="phone.png" alt="" class="phone1">
+   <img src="phone.png" alt="" class="phone2">
+ </div>
+
+    <div class="app-img-con">
+      <img src="apple-app.png" alt="" class="apple">
+      <img src="google-download.png" alt="" class="google">
+    </div>
+    </div>
+
+    <div class="col-md-12 img-con-md d-none">   
+       <img src="wada.png" alt="" class="wada">
+    <img src="phone.png" alt="" class="phone1">
+    <img src="phone.png" alt="" class="phone2">
+  </div>
+
+  </div>
+</div>
+</section>
+
+<!-- section 9 -->
+<section class="container-fluid-9">
+  <div class="col-lg-7 cus-test col-md-8 col-sm-12">
+  <h5 class="eigth-heading">Customer <br>
+  Feedback</h5>
+  <h1 class="eight-sub">WHAT OUR CLIENT SAY <br> ?</h1>
+  <p class="eight-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aut doloremque quod blanditiis dolorum temporibus totam odit minima aperiam adipisci placeat sunt, fugiat unde accusamus amet expedita deleniti. Porro deserunt, molestias reiciendis in id nihil voluptas esse, sint harum consequatur impedit corrupti vel totam laborum!</p>
+  <div class="num-con">
+    <div class="happy">
+      <div>
+      <p class="num">14K+</p>
+      <p class="num-text">HAPPY CUSTOMER</p>
+    </div>
+    </div>
+    <div class="happy">
+      <div>
+      <p class="num">16+</p>
+      <p class="num-text">AWARD WINNING</p>
+    </div>
+    </div>
+    <div class="happy">
+      <div>
+      <p class="num">68+</p>
+      <p class="num-text">FOOD MENU</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="float-card">
+  <div id="carouselExampleControls" class="carousel slide " data-bs-touch="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="float-card-con">
+          <div class="float-head">
+            <img src="profile.jpg" alt="" class="profile">
+            <i class="fa-solid fa-quote-right right-quote"></i>
+          </div>
+          <p class="float-card-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio assumenda id dolorum ab suscipit, neque ipsam pariatur repudiandae sint.</p>
+          <div class="float-head">
+            <div>
+              <h4 class="a-name">Ajay Sudhakar</h4>
+              <p class="a-founder">Founder $ CEO</p>
+            </div>
+            <div>
+              <div class="icon-con-card mod">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <P class="rating">4.5 Rating</P>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="float-card-con">
+          <div class="float-head">
+            <img src="profile.jpg" alt="" class="profile">
+            <i class="fa-solid fa-quote-right right-quote"></i>
+          </div>
+          <p class="float-card-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio assumenda id dolorum ab suscipit, neque ipsam pariatur repudiandae sint.</p>
+          <div class="float-head">
+            <div>
+              <h4 class="a-name">Ajay Sudhakar</h4>
+              <p class="a-founder">Founder $ CEO</p>
+            </div>
+            <div>
+              <div class="icon-con-card mod">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <P class="rating">4.5 Rating</P>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="float-card-con">
+          <div class="float-head">
+            <img src="profile.jpg" alt="" class="profile">
+            <i class="fa-solid fa-quote-right right-quote"></i>
+          </div>
+          <p class="float-card-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio assumenda id dolorum ab suscipit, neque ipsam pariatur repudiandae sint.</p>
+          <div class="float-head">
+            <div>
+              <h4 class="a-name">Ajay Sudhakar</h4>
+              <p class="a-founder">Founder $ CEO</p>
+            </div>
+            <div>
+              <div class="icon-con-card mod">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <P class="rating">4.5 Rating</P>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-car-btn">
+  <button class="nav-btn" data-bs-target="#carouselExampleControls" data-bs-slide="prev" ><i class="fa-solid fa-angle-left l-left"></i></button>
+  <button class="nav-btn" data-bs-target="#carouselExampleControls" data-bs-slide="next" ><i class="fa-solid fa-angle-right r-right"></i></button>
+</div>
+</div>
+</section>
+
+<!-- section 10 -->
+<section class="container-fluid-10">
+  <div class="row brand-row">
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand1.png" alt="" class="brand">
+    </div>
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand2.png" alt="" class="brand2">
+    </div>
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand3.png" alt="" class="brand3">
+    </div>
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand4.png" alt="" class="brand4">
+    </div>
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand5.png" alt="" class="brand5">
+    </div>
+    <div class="col-lg-2 col-md-4 col-mod col-sm-6">
+      <img src="brand6.png" alt="" class="brand6">
+    </div>
+  </div>
+</section>
+<!-- section 11 -->
+
+<section class="container-fluid-11">
+  <div class="row footer-first-row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <h1 class="footer-heading">SUBSCRIBE NEWS LATTER</h1>
+    </div>
+    <div class="col-lg-6 trans-con col-md-6 col-sm-12">
+      <div class="input-group mb-3 trans-border">
+        <div class="form-floating">
+          <input type="text" class="form-control trans-email" id="floatingInputGroup1" placeholder="example@gmail.com">
+          <label for="floatingInputGroup1 " class="trans-ex">example@gmail.com</label>
+        </div>
+        <span class="input-group-text trans-text">
+          <button class="share-btn btn-mod">Share App Link</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 first-col">
+      <h4 class="first-column-header">About Foodies</h4>
+      <p class="footer-sub">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae explicabo, sed necessitatibus dolore illo facilis.</p>
+      <div class="row">
+        <div class="col-lg-3 col-md-2 col-sm-2">
+          <i class="fa-regular fa-clock footer-icon"></i>
+        </div>
+        <div class="col-lg-9 col-md-10 col-sm-10">
+          <h6 class="sub-head-footer">Opening Hours</h6>
+          <p class="sub-desc-footer">Mon - Sat (8.00 - 6.00) <br> Sunday - Closed</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- ...... -->
+    <div class="col-lg-3 col-md-4 col-sm-8 second-col">
+      <h4 class="first-column-header">Contact Us</h4>
+      <p class="info"><span class="lbl-footer">Address:</span>8638 America Stanford Mailbon Star</p>
+      <p class="info"><span class="lbl-footer">Email:</span>Support@Gmail.Com</p>
+      <p class="info"><span class="lbl-footer">Phone:</span>88019*****</p>
+    </div>
+
+    <!-- ...... -->
+    <div class="col-lg-2 col-md-2 col-sm-4 third-col">
+      <h4 class="first-column-header">Links</h4>
+      <p class="link-text">Home</p>
+      <P class="link-text">About</P>
+      <P class="link-text">News</P>
+      <p class="link-text">Shop</p>
+    </div>
+
+    <!--  -->
+
+    <div class="col-lg-4 col-md-12 col-sm-12">
+      <h4 class="first-column-header">Recent Blog</h4>
+      <div class="row">
+        <div class="col-lg-3 footer-img-con col-md-2 col-sm-4">
+          <img src="footer-bur.webp" alt="" class="footer-img">
+        </div>
+        <div class="col-lg-9 col-md-10 col-sm-8">
+        <h4 class="blog-head">Best Smell Of Americano <br> Coffee Trins</h4>
+        <p class="blog-sub">DECEMBER 30 - 2021</p>
+        </div>
+      </div>
+<!-- ....... -->
+<div class="row">     
+   <div class="col-lg-3 footer-img-con col-md-2 col-sm-4">
+        <img src="footer-bur.webp" alt="" class="footer-img">
+      </div>
+      <div class="col-lg-9 col-md-10 col-sm-8">
+      <h4 class="blog-head">Best Smell Of Americano <br> Coffee Trins</h4>
+      <p class="blog-sub">JANUARY 03 - 2021</p>
+      </div>
+    </div>
+
+    </div>
+    </div>
+<!--  -->
+ <hr>
+
+ <div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-2">
+    <a href="" class="navbar-brand logo-name logo-footer">Foodies</a>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-7">
+    <p class="copyright">Copy Right@ Example 2021.Design By U.Vasanth</p>
+  </div>
+
+  <div class="col-lg-3 col-md-3 col-sm-3">
+    <div class="social-icons">
+      <i class="fa-brands fa-facebook-f act"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-linkedin-in"></i>
+      <i class="fa-brands fa-behance"></i>
+    </div>
+  </div>
+ </div>
+</section>
+
+</body>
+ 
+  <script>
+$(function () {
+  $('#datepicker').datepicker();
+  // $('#datepicker').datepicker('show');
+})
+
+
+
+
+
+</script>
+</html>
